@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request, abort
-from models import db, Movie
+from models import Movie
 import datetime
 from auth import requires_auth
 
