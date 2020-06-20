@@ -1,4 +1,5 @@
 import json
+import os
 from six.moves.urllib.request import urlopen
 from functools import wraps
 
@@ -6,8 +7,8 @@ from flask import Flask, request, jsonify, _request_ctx_stack
 from flask_cors import cross_origin
 from jose import jwt
 
-AUTH0_DOMAIN = 'dev-3v5wdr91.eu.auth0.com'
-API_AUDIENCE = 'agency'
+AUTH0_DOMAIN = os.environ['AUTH0_DOMAIN']
+API_AUDIENCE = os.environ['API_AUDIENCE']
 ALGORITHMS = ["RS256"]
 
 
