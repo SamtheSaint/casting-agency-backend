@@ -1,1 +1,2 @@
-export DATABASE_URL="replace-with-local-url"
+export DATABASE_URL="REPLACE_WITH_LOCAL_URI"
+export FLASK_APP=app.py
