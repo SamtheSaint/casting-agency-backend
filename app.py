@@ -23,12 +23,28 @@ def health_check():
     }), 200
 
 
-@app.errorhandler(422)
-def unprocessable(error):
+@app.errorhandler(400)
+def bad_request(error):
     return jsonify({
         "success": False,
-        "message": "unprocessable"
-    }), 422
+        "message": "bad request"
+    }), 404
+
+
+@app.errorhandler(401)
+def unauthorized(error):
+    return jsonify({
+        "success": False,
+        "message": "unauthorized"
+    }), 404
+
+
+@app.errorhandler(403)
+def forbidden(error):
+    return jsonify({
+        "success": False,
+        "message": "forbidden"
+    }), 404
 
 
 @app.errorhandler(404)
@@ -37,6 +53,30 @@ def resource_not_found(error):
         "success": False,
         "message": "resource not found"
     }), 404
+
+
+@app.errorhandler(405)
+def method_not_allowed(error):
+    return jsonify({
+        "success": False,
+        "message": "method not allowed"
+    }), 405
+
+
+@app.errorhandler(422)
+def unprocessable(error):
+    return jsonify({
+        "success": False,
+        "message": "unprocessable"
+    }), 422
+
+
+@app.errorhandler(500)
+def internal_server_error(error):
+    return jsonify({
+        "success": False,
+        "message": "internal server error (see logs)"
+    }), 500
 
 
 @app.errorhandler(AuthError)
