@@ -22,7 +22,7 @@ class Movie(db.Model):
     def delete(self):
         db.session.delete(self)
         db.session.commit()
-    
+
     def update(self, title, date):
         self.title = title if title else self.title
         self.date = date if date else self.date
@@ -52,7 +52,7 @@ class Actor(db.Model):
     def delete(self):
         db.session.delete(self)
         db.session.commit()
-    
+
     def update(self, name, age, gender):
         self.name = name if name else self.name
         self.age = age if age else self.age
