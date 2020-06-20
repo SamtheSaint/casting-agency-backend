@@ -1,0 +1,10 @@
+flask
+flask_script
+flask_migrate
+psycopg2-binary
+flask_sqlalchemy
+flask-cors
+python-dotenv
+python-jose
+six
+gunicorn
