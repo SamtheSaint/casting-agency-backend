@@ -12,13 +12,13 @@ Working within a virtual environment is recommended whenever using Python for pr
 
 ### PIP Dependencies
 
-Once you have your virtual environment setup and running, install dependencies by naviging to the `/backend` directory and running:
+Once you have your virtual environment setup and running, install dependencies by opening a terminal in this directory and running:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-This will install all of the required packages we selected within the `requirements.txt` file.
+This will install all of the required packages we selected within the [`./requirements.txt`](./requirements.txt) file.
 
 ### PostgreSQL Database
 
@@ -28,13 +28,13 @@ Follow instructions to install the latest version of postgres for your platform 
 
 ### Setup the Database
 
-The migrations for the database have already been included in the `/backend/migrations` directory. To setup a database for the application, open the terminal and run:
+The migrations for the database have already been included in the `./migrations` directory. To setup a database for the application, open the terminal and run:
 
 ```bash
 createdb DATABASE_NAME
 ```
 
-Then nagivate to the `/backend/setup.sh` script and set the database url environment variable. For the format of the URI, refer to the [postgres docs](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING).
+Then nagivate to the [`./setup.sh`](./setup.sh) script and set the database url environment variable. For the format of the URI, refer to the [postgres docs](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING).
 
 ```
 postgresql://[user[:password]@][netloc][:port][,...][/dbname][?param1=value1&...]
@@ -42,7 +42,7 @@ postgresql://[user[:password]@][netloc][:port][,...][/dbname][?param1=value1&...
 
 ### Run the Database Migrations
 
-Once the database uri has been setup, the migrations can be run to setup the necessary database schema needed for the web app. Open a terminal in the `backend` directory and run:
+Once the database uri has been setup, the migrations can be run to setup the necessary database schema needed for the web app. Open a terminal in this directory and run:
 
 ```bash
 python manage.py db upgrade
@@ -50,7 +50,7 @@ python manage.py db upgrade
 
 ## Running the server
 
-From within the `/backend` directory first ensure you are working using your created virtual environment.
+From within this directory first ensure you are working using your created virtual environment.
 
 To run the server, execute:
 
